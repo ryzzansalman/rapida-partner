@@ -1,0 +1,46 @@
+{
+  "$id": "form-array.ref.json",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "array"
+    },
+    "conditions": {
+      "$ref": "form-common-conditions.ref.json"
+    },
+    "todo": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "elements": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "form-array.ref.json"
+          },
+          {
+            "$ref": "form-input.ref.json"
+          },
+          {
+            "$ref": "form-select.ref.json"
+          },
+          {
+            "$ref": "form-autocomplete.ref.json"
+          }
+        ]
+      }
+    }
+  },
+  "required": [
+    "type",
+    "id",
+    "title",
+    "array"
+  ]
+}

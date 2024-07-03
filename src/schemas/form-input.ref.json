@@ -1,0 +1,76 @@
+{
+  "$id": "form-input.ref.json",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "input"
+    },
+    "name": {
+      "type": "string"
+    },
+    "dataType": {
+      "type": "string",
+      "enum": [
+        "text",
+        "number",
+        "password",
+        "email",
+        "color",
+        "date",
+        "file"
+      ]
+    },
+    "label": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "tooltip": {
+      "type": "string"
+    },
+    "isAutofocus": {
+      "type": "boolean"
+    },
+    "isDisabled": {
+      "type": "boolean"
+    },
+    "isRequired": {
+      "type": "boolean"
+    },
+    "isUnique": {
+      "type": "boolean"
+    },
+    "conditions": {
+      "$ref": "form-common-conditions.ref.json"
+    },
+    "validators": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "cpf",
+          "cnpj"
+        ]
+      }
+    },
+    "todo": {
+      "type": "string"
+    },
+    "maxlength": {
+      "type": "number"
+    },
+    "minLength": {
+      "type": "number"
+    },
+    "apiRequest": {
+      "$ref": "form-common-api-request.ref.json"
+    }
+  },
+  "required": [
+    "type",
+    "dataType",
+    "name",
+    "label"
+  ]
+}

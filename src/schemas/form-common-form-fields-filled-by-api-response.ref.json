@@ -1,0 +1,28 @@
+{
+    "$id": "form-common-form-fields-filled-by-api-response.ref.json",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "formFieldName": {
+                "type": "string"
+            },
+            "propertiesFromApiToFillFormField": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "arrayParents": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        },
+        "required": [
+            "formFieldName",
+            "propertiesFromApiToFillFormField"
+        ]
+    }
+}

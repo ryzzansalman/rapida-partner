@@ -1,0 +1,128 @@
+{
+    "$id": "form-autocomplete.ref.json",
+    "type": "object",
+    "properties": {
+        "type": {
+            "const": "autocomplete"
+        },
+        "name": {
+            "type": "string"
+        },
+        "dataType": {
+            "type": "string",
+            "enum": [
+                "text",
+                "number",
+                "password",
+                "email",
+                "color",
+                "date",
+                "file"
+            ]
+        },
+        "label": {
+            "type": "string"
+        },
+        "placeholder": {
+            "type": "string"
+        },
+        "tooltip": {
+            "type": "string"
+        },
+        "isAutofocus": {
+            "type": "boolean"
+        },
+        "isDisabled": {
+            "type": "boolean"
+        },
+        "isRequired": {
+            "type": "boolean"
+        },
+        "isUnique": {
+            "type": "boolean"
+        },
+        "conditions": {
+          "$ref": "form-common-conditions.ref.json"
+        },
+        "validators": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "cpf",
+                    "cnpj"
+                ]
+            }
+        },
+        "todo": {
+            "type": "string"
+        },
+        "optionsApi": {
+            "type": "object",
+            "properties": {
+                "endpoint": {
+                    "type": "string"
+                },
+                "labelField": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "valueField": {
+                    "type": "string"
+                },
+                "paramsToFilter": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "paramType": {
+                    "type": "string",
+                    "enum": [
+                        "query",
+                        "path"
+                    ]
+                },
+                "populate": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "formFieldsFilledByApiResponse": {
+                    "$ref": "form-common-form-fields-filled-by-api-response.ref.json"
+                },
+                "filtersFromOtherFormFields": {
+                    "$ref": "form-common-filters-from-other-form-fields.ref.json"
+                },
+                "isNotKunlatekResponse": {
+                    "type": "boolean"
+                },
+                "rawQuery": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "labelField",
+                "valueField",
+                "paramsToFilter",
+                "paramType"
+            ]
+        },
+        "isMultiple": {
+            "type": "boolean"
+        },
+        "relatedEntity": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "type",
+        "dataType",
+        "name",
+        "label",
+        "optionsApi"
+    ]
+}

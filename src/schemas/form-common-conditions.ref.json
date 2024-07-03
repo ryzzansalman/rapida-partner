@@ -1,0 +1,76 @@
+{
+  "$id": "form-common-conditions.ref.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "type": "string",
+        "enum": [
+          "form",
+          "code",
+          "array"
+        ]
+      },
+      "elements": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string"
+            },
+            "value": {},
+            "array": {
+              "type": "string"
+            },
+            "comparisonOperator": {
+              "type": "string",
+              "enum": [
+                "===",
+                ">",
+                ">=",
+                "in",
+                "<",
+                "<=",
+                "!==",
+                "nin"
+              ]
+            },
+            "logicalOperator": {
+              "type": "string",
+              "enum": [
+                "&&",
+                "!",
+                "nor",
+                "||"
+              ]
+            }
+          },
+          "required": [
+            "key",
+            "comparisonOperator"
+          ]
+        }
+      },
+      "code": {
+        "type": "object",
+        "properties": {
+          "triggerField": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "triggerField",
+          "code"
+        ]
+      }
+    },
+    "required": [
+      "type"
+    ]
+  }
+}

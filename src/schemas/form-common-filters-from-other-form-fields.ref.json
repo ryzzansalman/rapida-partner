@@ -1,0 +1,19 @@
+{
+    "$id": "form-common-filters-from-other-form-fields.ref.json",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "formFieldName": {
+                "type": "string"
+            },
+            "filterPropertyName": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "formFieldName",
+            "filterPropertyName"
+        ]
+    }
+}

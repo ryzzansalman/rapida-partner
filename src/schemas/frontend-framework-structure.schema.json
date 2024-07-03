@@ -1,0 +1,177 @@
+{
+  "$id": "framework-structure-vue.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "projectFolderCase": {
+      "type": "string",
+      "enum": ["kebab", "snake", "pascal", "camel"]
+    },
+    "moduleFolder": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": ["kebab", "snake", "pascal", "camel"]
+        },
+        "folderBasePath": {
+          "type": "string"
+        },
+        "hasFolderWithItsName": {
+          "type": "boolean"
+        }
+      },
+      "required": ["case", "folderBasePath"]
+    },
+    "componentFolder": {
+      "$comment": "IF NOT defined THEN it will be implied that componets are nested to module folders.",
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": ["kebab", "snake", "pascal", "camel"]
+        },
+        "folderBasePath": {
+          "type": "string"
+        },
+        "hasFolderWithItsName": {
+          "type": "boolean"
+        }
+      },
+      "required": ["case", "folderBasePath", "hasFolderWithItsName"]
+    },
+    "moduleFile": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": ["kebab", "snake", "pascal", "camel"]
+        },
+        "folderBasePath": {
+          "type": "string"
+        },
+        "fileExtension": {
+          "type": "string"
+        },
+        "keyword": {
+          "type": "string"
+        }
+      },
+      "required": ["case", "fileExtension"]
+    },
+    "componentFile": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": ["kebab", "snake", "pascal", "camel"]
+        },
+        "folderBasePath": {
+          "type": "string"
+        },
+        "fileExtension": {
+          "type": "string"
+        },
+        "keyword": {
+          "type": "string"
+        }
+      },
+      "required": ["case", "fileExtension"]
+    },
+    "templateFile": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": ["kebab", "snake", "pascal", "camel"]
+        },
+        "folderBasePath": {
+          "type": "string"
+        },
+        "fileExtension": {
+          "type": "string"
+        },
+        "keyword": {
+          "type": "string"
+        }
+      },
+      "required": ["case", "fileExtension"]
+    },
+    "controllerFile": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": ["kebab", "snake", "pascal", "camel"]
+        },
+        "folderBasePath": {
+          "type": "string"
+        },
+        "fileExtension": {
+          "type": "string"
+        },
+        "keyword": {
+          "type": "string"
+        }
+      },
+      "required": ["case", "fileExtension"]
+    },
+    "serviceFile": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": ["kebab", "snake", "pascal", "camel"]
+        },
+        "folderBasePath": {
+          "type": "string"
+        },
+        "fileExtension": {
+          "type": "string"
+        },
+        "keyword": {
+          "type": "string"
+        }
+      },
+      "required": ["case", "fileExtension"]
+    },
+    "styleFile": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": ["kebab", "snake", "pascal", "camel"]
+        },
+        "folderBasePath": {
+          "type": "string"
+        },
+        "fileExtension": {
+          "type": "string"
+        },
+        "keyword": {
+          "type": "string"
+        }
+      },
+      "required": ["case", "fileExtension"]
+    },
+    "dependencies": {
+      "type": "object",
+      "description": "Dependencies according to components elements",
+      "properties": {
+        "array": {
+          "type": "string"
+        },
+        "autocomplete": {
+          "type": "string"
+        },
+        "wysiwyg": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "projectFolderCase",
+    "componentFile"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+    "$id": "form-select.ref.json",
+    "type": "object",
+    "properties": {
+        "type": {
+            "const": "select"
+        },
+        "name": {
+            "type": "string"
+        },
+        "dataType": {
+            "type": "string",
+            "enum": [
+                "text",
+                "number",
+                "password",
+                "email",
+                "color",
+                "date",
+                "file"
+            ]
+        },
+        "label": {
+            "type": "string"
+        },
+        "placeholder": {
+            "type": "string"
+        },
+        "tooltip": {
+            "type": "string"
+        },
+        "isAutofocus": {
+            "type": "boolean"
+        },
+        "isDisabled": {
+            "type": "boolean"
+        },
+        "isRequired": {
+            "type": "boolean"
+        },
+        "isUnique": {
+            "type": "boolean"
+        },
+        "conditions": {
+          "$ref": "form-common-conditions.ref.json"
+        },
+        "validators": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "cpf",
+                    "cnpj"
+                ]
+            }
+        },
+        "todo": {
+            "type": "string"
+        },
+        "isMultiple": {
+            "type": "boolean"
+        },
+        "options": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    },
+                    "isDisabled": {
+                        "type": "boolean"
+                    },
+                    "isSelected": {
+                        "type": "boolean"
+                    }
+                },
+                "required": [
+                    "label",
+                    "value"
+                ]
+            }
+        }
+    },
+    "required": [
+        "type",
+        "dataType",
+        "name",
+        "label",
+        "placeholder",
+        "options"
+    ]
+}

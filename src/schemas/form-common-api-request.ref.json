@@ -1,0 +1,32 @@
+{
+    "$id": "form-common-api-request.ref.json",
+    "type": "object",
+    "properties": {
+        "endpoint": {
+            "type": "string"
+        },
+        "paramType": {
+            "type": "string",
+            "enum": [
+                "query",
+                "path"
+            ]
+        },
+        "isNotKunlatekResponse": {
+            "type": "boolean"
+        },
+        "filtersFromOtherFormFields": {
+            "$ref": "form-common-filters-from-other-form-fields.ref.json"
+        },
+        "formFieldsFilledByApiResponse": {
+            "$ref": "form-common-form-fields-filled-by-api-response.ref.json"
+        },
+        "usesAuthentication": {
+            "type": "boolean"
+        }
+    },
+    "required": [
+        "endpoint",
+        "paramType"
+    ]
+}

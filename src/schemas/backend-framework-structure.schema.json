@@ -1,0 +1,194 @@
+{
+  "$id": "framework-structure-vue.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "projectFolderCase": {
+        "type": "string",
+        "enum": ["kebab", "snake", "pascal", "camel"]
+    },
+    "controllerFileNomenclature": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": ["kebab", "snake", "pascal", "camel"]
+        },
+        "keyword": {
+          "type": "string"
+        }
+      },
+      "required": ["case"]
+    },
+    "modelFileNomenclature": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": ["kebab", "snake", "pascal", "camel"]
+        },
+        "keyword": {
+          "type": "string"
+        }
+      },
+      "required": ["case"]
+    },
+    "moduleFileNomenclature": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": ["kebab", "snake", "pascal", "camel"]
+        },
+        "keyword": {
+          "type": "string"
+        }
+      },
+      "required": ["case"]
+    },
+    "repositoryFileNomenclature": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": ["kebab", "snake", "pascal", "camel"]
+        },
+        "keyword": {
+          "type": "string"
+        }
+      },
+      "required": ["case"]
+    },
+    "componentPath": {
+      "type": "string"
+    },
+    "controllerPath": {
+      "type": "string"
+    },
+    "modelPath": {
+      "type": "string"
+    },
+    "modulePath": {
+      "type": "string"
+    },
+    "repositoryPath": {
+      "type": "string"
+    },
+    "controllerFile": {
+      "type": "object",
+      "properties": {
+        "hasControllerFile": {
+          "type": "boolean"
+        },
+        "controllerFileExtension": {
+          "type": "string"
+        }
+      },
+      "required": ["hasControllerFile"]
+    },
+    "modelFile": {
+      "type": "object",
+      "properties": {
+        "hasModelFile": {
+          "type": "boolean"
+        },
+        "modelFileExtension": {
+          "type": "string"
+        }
+      },
+      "required": ["hasModelFile"]
+    },
+    "moduleFile": {
+      "type": "object",
+      "properties": {
+        "hasModuleFile": {
+          "type": "boolean"
+        },
+        "moduleFileExtension": {
+          "type": "string"
+        }
+      },
+      "required": ["hasModuleFile"]
+    },
+    "repositoryFile": {
+      "type": "object",
+      "properties": {
+        "hasRepositoryFile": {
+          "type": "boolean"
+        },
+        "repositoryFileExtension": {
+          "type": "string"
+        }
+      },
+      "required": ["hasRepositoryFile"]
+    },
+    "uniqueFile": {
+      "type": "object",
+      "properties": {
+        "hasUniqueFile": {
+          "type": "boolean"
+        },
+        "uniqueFileExtension": {
+          "type": "string"
+        }
+      },
+      "required": ["hasUniqueFile"]
+    },
+    "sourcePath": {
+      "type": "string",
+      "description": "The source path of the framework"
+    },
+    "hasComponentSpecificFolder": {
+      "type": "boolean"
+    },
+    "dependencies": {
+      "type": "object",
+      "description": "Dependencies according to components elements",
+      "properties": {
+        "array": {
+          "type": "array",
+          "elements": [
+            {
+              "type": "string",
+              "description": "Package name"
+            }
+          ]
+        },
+        "autocomplete": {
+          "type": "array",
+          "elements": [
+            {
+              "type": "string",
+              "description": "Package name"
+            }
+          ]
+        },
+        "wysiwyg": {
+          "type": "array",
+          "elements": [
+            {
+              "type": "string",
+              "description": "Package name"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "projectFolderCase",
+    "controllerFileNomenclature",
+    "modelFileNomenclature",
+    "moduleFileNomenclature",
+    "repositoryFileNomenclature",
+    "componentPath",
+    "controllerPath",
+    "modelFile",
+    "moduleFile",
+    "repositoryFile",
+    "uniqueFile",
+    "sourcePath",
+    "hasComponentSpecificFolder",
+    "dependencies"
+  ]
+}

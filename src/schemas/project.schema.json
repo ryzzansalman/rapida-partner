@@ -1,0 +1,178 @@
+{
+  "$id": "project.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "businessPlan": {
+      "type": "object",
+      "properties": {
+        "businessValue": {
+          "type": "string"
+        },
+        "targetMarket": {
+          "type": "string"
+        },
+        "benchmarkings": {
+          "type": "string"
+        },
+        "legalIssues": {
+          "type": "string"
+        },
+        "ethicalIssues": {
+          "type": "string"
+        },
+        "afterSale": {
+          "type": "string"
+        }        
+      }
+    },
+    "frontend": {
+      "type": "object",
+      "properties": {
+        "framework": {
+          "type": "string",
+          "enum": [
+            "angular",
+            "flutter",
+            "react",
+            "svelte",
+            "vue"
+          ]
+        },
+        "uiKit": {
+          "type": "string",
+          "enum": [
+            "antdesign",
+            "bootstrap",
+            "material",
+            "flowbite"
+          ]
+        }
+      },
+      "required": [
+        "framework",
+        "uiKit"
+      ]
+    },
+    "backend": {
+      "type": "object",
+      "properties": {
+        "framework": {
+          "type": "string",
+          "enum": [
+            "functions",
+            "lambda",
+            "laravel",
+            "nest"
+          ]
+        },
+        "database": {
+          "type": "string",
+          "enum": [
+            "mariadb",
+            "mongodb",
+            "oracle",
+            "postgresql"
+          ]
+        }
+      },
+      "required": [
+        "framework",
+        "database"
+      ]
+    },
+    "modules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          },
+          "elements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": ["forms", "lists", "displays", "charts"]
+                },
+                "id": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "forms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          },
+          "elements": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "form-array.ref.json"
+                },
+                {
+                  "$ref": "form-autocomplete.ref.json"
+                },
+                {
+                  "$ref": "form-input.ref.json"
+                },
+                {
+                  "$ref": "form-select.ref.json"
+                },
+                {
+                  "$ref": "form-tab.ref.json"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "elements"
+        ]
+      }
+    },
+    "lists": {},
+    "displays": {},
+    "charts": {}
+  },
+  "required": [
+    "id",
+    "title",
+    "description"
+  ]
+}
