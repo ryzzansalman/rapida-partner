@@ -5,7 +5,7 @@ export interface IFormSelect {
   name: string;
   dataType: "text" | "number" | "password" | "email" | "color" | "date" | "file";
   label: string;
-  placeholder: string;
+  placeholder?: string;
   tooltip?: string;
   isAutofocus?: boolean;
   isDisabled?: boolean;

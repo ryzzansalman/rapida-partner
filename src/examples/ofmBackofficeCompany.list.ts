@@ -2,7 +2,7 @@ import type { IList } from "../interfaces/list.interface";
 
 export const ofmBackofficeCompanyList: IList = {
     id: "ofmBackofficeCompanyList",
-    title: "Lista de usuários",
+    title: "Lista de empresas",
     dataSource: {
         endpoint: "/companies",
         paramType: "query",
@@ -32,8 +32,8 @@ export const ofmBackofficeCompanyList: IList = {
                     verb: "delete",
                     propertiesAsPathParam: ["_id"],
                     dialog: {
-                        title: "Excluir animação",
-                        message: "Confirmar exclusão de animação?"
+                        title: "Excluir empresa",
+                        message: "Confirmar exclusão de empresa?"
                     }
                 },
                 link: {
