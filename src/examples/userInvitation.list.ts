@@ -8,6 +8,7 @@ export const userInvitationList: IList = {
         paramType: "query",
         usesAuthentication: true
     },
+    guards: ['Permeson'],
     properties: [
         { property: "name", type: "title" },
         { property: "username", type: "subtitle", isTimestamp: true, }

@@ -1,0 +1,25 @@
+{
+    "$id": "business-plan.ref.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "businessValue": {
+            "type": "string"
+        },
+        "targetMarket": {
+            "type": "string"
+        },
+        "benchmarkings": {
+            "type": "string"
+        },
+        "legalIssues": {
+            "type": "string"
+        },
+        "ethicalIssues": {
+            "type": "string"
+        },
+        "afterSale": {
+            "type": "string"
+        }
+    }
+}

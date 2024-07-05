@@ -1,4 +1,5 @@
 {
+    "$id": "list.ref.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "properties": {
@@ -17,6 +18,9 @@
         },
         "dataSource": {
             "$ref": "form-common-api-request.ref.json"
+        },
+        "businessRules": {
+          "$ref": "business-rules.ref.json"
         },
         "properties": {
             "type": "array",
@@ -208,6 +212,7 @@
         }
     },
     "required": [
+        "id",
         "title",
         "dataSource",
         "properties"

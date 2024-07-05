@@ -3,6 +3,7 @@ import type { IForm } from "../interfaces/project.interface";
 export const ofmBackofficeCompanyForm: IForm = {
     id: "ofmBackofficeCompanyForm",
     title: "Gerenciar empresa",
+    guards: ['Permeson'],
     elements: [
         {
             type: "tab",

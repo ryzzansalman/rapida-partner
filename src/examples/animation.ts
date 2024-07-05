@@ -3,7 +3,7 @@ import { animationForm } from './animation.form';
 import { animationList } from './animation.list';
 export const animation: IProject = {
   id: "animation",
-  description: "Animation",
+  description: "Gerar uma base de dados para ",
   title: "Animação",
   businessPlan: {
     businessValue: ``,

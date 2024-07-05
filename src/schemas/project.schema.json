@@ -13,27 +13,10 @@
       "type": "string"
     },
     "businessPlan": {
-      "type": "object",
-      "properties": {
-        "businessValue": {
-          "type": "string"
-        },
-        "targetMarket": {
-          "type": "string"
-        },
-        "benchmarkings": {
-          "type": "string"
-        },
-        "legalIssues": {
-          "type": "string"
-        },
-        "ethicalIssues": {
-          "type": "string"
-        },
-        "afterSale": {
-          "type": "string"
-        }        
-      }
+      "$ref": "business-plan.ref.json"
+    },
+    "businessRules": {
+      "$ref": "business-rules.ref.json"
     },
     "frontend": {
       "type": "object",
@@ -123,50 +106,11 @@
       }
     },
     "forms": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "icon": {
-            "type": "string"
-          },
-          "elements": {
-            "type": "array",
-            "items": {
-              "oneOf": [
-                {
-                  "$ref": "form-array.ref.json"
-                },
-                {
-                  "$ref": "form-autocomplete.ref.json"
-                },
-                {
-                  "$ref": "form-input.ref.json"
-                },
-                {
-                  "$ref": "form-select.ref.json"
-                },
-                {
-                  "$ref": "form-tab.ref.json"
-                }
-              ]
-            }
-          }
-        },
-        "required": [
-          "id",
-          "title",
-          "elements"
-        ]
-      }
+      "$ref": "form.ref.json"
     },
-    "lists": {},
+    "lists": {
+      "$ref": "list.ref.json"
+    },
     "displays": {},
     "charts": {}
   },

@@ -2,18 +2,20 @@ import type { IFormArray } from "./form-array.interface";
 import type { IFormAutocomplete } from "./form-autocomplete.interface";
 import type { IFormInput } from "./form-input.interface";
 import type { IFormSelect } from "./form-select.interface";
-import type { FormTab } from "./form-tab.interface";
+import type { IFormTab } from "./form-tab.interface";
+import type { IList } from "./list.interface";
 
 export interface IProject {
   id: string;
   title: string;
   description: string;
   businessPlan?: IBusinessPLan;
+  businessRules?: IBusinessRule[];
   frontend?: IFrontend;
   backend?: IBackend;
   modules?: IModule[];
   forms?: IForm[];
-  lists?: any;
+  lists?: IList[];
   displays?: any;
   charts?: any;
 }
@@ -37,11 +39,22 @@ interface IBusinessPLan {
   afterSales: string
 }
 
+export interface IBusinessRule {
+  rule: {
+    description: string;
+    subrules?: {
+      description: string;
+    }[];
+  };
+}
+
 export interface IForm {
   id: string;
   title: string;
   elements: IFormElement[];
   icon?: string;
+  guards?: string[];
+  businessRules?: IBusinessRule[];
 }
 
 interface IModule {
@@ -56,4 +69,4 @@ interface IModuleElement {
   type: "forms" | "lists" | "displays" | "charts";
 }
 
-export type IFormElement = IFormInput | IFormSelect | IFormAutocomplete | IFormArray | FormTab;
+export type IFormElement = IFormInput | IFormSelect | IFormAutocomplete | IFormArray | IFormTab;

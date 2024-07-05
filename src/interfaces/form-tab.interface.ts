@@ -1,6 +1,6 @@
-import { IFormElement } from "./project.interface";
+import type { IFormElement } from "./project.interface";
 
-export interface FormTab {
+export interface IFormTab {
   type: "tab";
   todo?: string;
   id: string;

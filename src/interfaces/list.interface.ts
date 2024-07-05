@@ -1,10 +1,12 @@
-import { IApiRequest } from "./form-input.interface";
+import type { IApiRequest } from "./form-input.interface";
+import type { IBusinessRule } from "./project.interface";
 
 export interface IList {
-    id?: string; // named according to component file name (<id>.<componentType>.ts)
+    id: string; // named according to component file name (<id>.<componentType>.ts)
     title: string;
     guards?: string[];
     dataSource: IApiRequest;
+    businessRules?: IBusinessRule[];
     properties: {
         property: string; // property taken from dataSource response. e.g.: "email"
         label?: string; // label to property. e.g.: "E-mail"

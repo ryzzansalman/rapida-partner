@@ -8,6 +8,7 @@ export const ofmBackofficeCompanyList: IList = {
         paramType: "query",
         usesAuthentication: true
     },
+    guards: ['Permeson'],
     properties: [
         { property: "name", type: "title" },
         { property: "cnpj", type: "subtitle", isTimestamp: true, }

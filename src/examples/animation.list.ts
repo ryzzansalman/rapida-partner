@@ -3,6 +3,7 @@ import type { IList } from "../interfaces/list.interface";
 export const animationList: IList = {
     id: "animationList",
     title: "Lista de animações",
+    guards: ['Permeson'],
     dataSource: {
         endpoint: "/animations",
         paramType: "query",
