@@ -23,7 +23,6 @@ interface IBddData {
 
 const createTrelloProject = async (bddData: IBddData) => {
     try {
-        console.log(trelloApiKey, 29292929)
         // Step 1: Create Board
         const boardResponse = await fetch(`https://api.trello.com/1/boards/?key=${trelloApiKey}&token=${trelloToken}`, {
             method: 'POST',
@@ -34,12 +33,28 @@ const createTrelloProject = async (bddData: IBddData) => {
                 name: bddData.bddTitle
             })
         });
-
-        console.log(boardResponse, 414141);
+        
         const boardData = await boardResponse.json();
         const boardId = boardData.id;
-        // Step 2: Create Lists
-        const lists = ['To Do', 'In Progress', 'Done'];
+
+        // Step 2: Get and Archive Existing Lists
+        const listsResponse = await fetch(`https://api.trello.com/1/boards/${boardId}/lists?key=${trelloApiKey}&token=${trelloToken}`);
+        const listsData = await listsResponse.json();
+
+        for (const list of listsData) {
+            await fetch(`https://api.trello.com/1/lists/${list.id}/closed?key=${trelloApiKey}&token=${trelloToken}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    value: true
+                })
+            });
+        }
+
+        // Step 3: Create Lists
+        const lists = ['Done', 'In Progress', 'To Do'];
         const listIds: { [key: string]: string } = {};
 
         for (const list of lists) {
@@ -58,8 +73,9 @@ const createTrelloProject = async (bddData: IBddData) => {
             listIds[list] = listData.id;
         }
 
-        // Step 3: Create Cards in "To Do" list and add checklists
+        // Step 4: Create Cards in "To Do" list and add checklists
         for (const narrative of bddData.narratives) {
+            const cardDescription = `${narrative.description}\n\nCypress Code:\n${narrative.e2e.cypress}`;
             const cardResponse = await fetch(`https://api.trello.com/1/cards?key=${trelloApiKey}&token=${trelloToken}`, {
                 method: 'POST',
                 headers: {
@@ -67,7 +83,7 @@ const createTrelloProject = async (bddData: IBddData) => {
                 },
                 body: JSON.stringify({
                     name: narrative.title,
-                    desc: narrative.description,
+                    desc: `${narrative.description}\n${cardDescription}`,
                     idList: listIds['To Do']
                 })
             });
@@ -104,7 +120,7 @@ const createTrelloProject = async (bddData: IBddData) => {
             }
         }
 
-        console.log(`Board '${bddData.bddTitle}' created successfully!`);
+        console.info(`Board '${bddData.bddTitle}' created successfully!`);
     } catch (error) {
         console.error('Error creating board or lists:', error);
     }

@@ -41,9 +41,9 @@ const sendEmailWithNodemailer = (email: IEmail) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.log(error);
+            return console.error(error);
         }
-        console.log('Email enviado: ' + (info as nodemailer.SentMessageInfo).response);
+        console.info('Email enviado: ' + (info as nodemailer.SentMessageInfo).response);
     });
 };
 

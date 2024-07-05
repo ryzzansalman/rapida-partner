@@ -1,4 +1,4 @@
-import { sendEmailWithNodemailer, type IEmail } from "../src/utils/email";
+import { sendEmailWithNodemailer, type IEmail } from "../utils/email";
 
 const emailConfigs: IEmail = {
     content: {
