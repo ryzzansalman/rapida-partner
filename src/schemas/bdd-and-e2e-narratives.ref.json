@@ -1,0 +1,57 @@
+{
+    "$id": "bdd-and-e2e-narratives.ref.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "title": {
+                "type": "string"
+            },
+            "description": {
+                "type": "string"
+            },
+            "businessRules": {
+                "$ref": "business-rules.ref.json"
+            },
+            "scenarios": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "title": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "businessRules": {
+                            "$ref": "business-rules.ref.json"
+                        }
+                    },
+                    "required": [
+                        "title",
+                        "description"
+                    ]
+                }
+            },
+            "e2e": {
+                "type": "object",
+                "properties": {
+                    "cypress": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "cypress"
+                ]
+            }
+        },
+        "required": [
+            "title",
+            "description",
+            "scenarios",
+            "e2e"
+        ]
+    }
+}

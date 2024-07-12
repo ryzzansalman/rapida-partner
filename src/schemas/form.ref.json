@@ -15,35 +15,19 @@
                 "type": "string"
             },
             "guards": {
-                "type": "array",
-                "items": {
-                    "type": "string"
-                }
+                "type": "string",
+                "enum": [
+                    "isAuthenticated",
+                    "isNotAuthenticated",
+                    "isAuthorized",
+                    "isNotAuthorized"
+                ]
             },
             "businessRules": {
                 "$ref": "business-rules.ref.json"
             },
             "elements": {
-                "type": "array",
-                "items": {
-                    "oneOf": [
-                        {
-                            "$ref": "form-array.ref.json"
-                        },
-                        {
-                            "$ref": "form-autocomplete.ref.json"
-                        },
-                        {
-                            "$ref": "form-input.ref.json"
-                        },
-                        {
-                            "$ref": "form-select.ref.json"
-                        },
-                        {
-                            "$ref": "form-tab.ref.json"
-                        }
-                    ]
-                }
+                "$ref": "form-one-of.ref.json"
             }
         },
         "required": [

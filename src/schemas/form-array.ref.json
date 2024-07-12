@@ -18,29 +18,12 @@
       "type": "string"
     },
     "elements": {
-      "type": "array",
-      "items": {
-        "oneOf": [
-          {
-            "$ref": "form-array.ref.json"
-          },
-          {
-            "$ref": "form-input.ref.json"
-          },
-          {
-            "$ref": "form-select.ref.json"
-          },
-          {
-            "$ref": "form-autocomplete.ref.json"
-          }
-        ]
-      }
+      "$ref": "form-one-of.ref.json"
     }
   },
   "required": [
     "type",
     "id",
-    "title",
-    "array"
+    "title"
   ]
 }

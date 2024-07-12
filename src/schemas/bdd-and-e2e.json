@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "bddTitle": {
+            "type": "string"
+        },
+        "businessRules": {
+            "$ref": "business-rules.ref.json"
+        },
+        "forms": {
+            "type": "array",
+            "elements": {
+                "type": "object",
+                "properties": {
+                    "forms": {
+                        "$ref": "form.ref.json",
+                        "narratives": {
+                            "$ref": "bdd-and-e2e-narratives.ref.json"
+                        }
+                    },
+                    "lists": {
+                        "$ref": "list.ref.json",
+                        "narratives": {
+                            "$ref": "bdd-and-e2e-narratives.ref.json"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "bddTitle",
+        "narratives"
+    ]
+}
