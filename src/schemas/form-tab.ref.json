@@ -1,52 +1,41 @@
 {
   "$id": "form-tab.ref.json",
-  "type": "array",  
-  "elements": {
+  "type":"object",
+  "properties": {
     "type": {
       "const": "tab"
     },
-    "todo": {
-      "type": "string"
-    },
     "id": {
-      "type": "string"
+      "type":"string"
+    },
+    "todo": {
+      "type":"string"
     },
     "tabs": {
       "type": "array",
       "items": {
-        "elements": {
-          "type": "object",
-          "properties": {
-            "id": "string",
-            "title": "string",
-            "elements": {
-              "type": "array",
-              "items": {
-                "oneOf": [
-                  {
-                    "$ref": "form-array.ref.json"
-                  },
-                  {
-                    "$ref": "form-input.ref.json"
-                  },
-                  {
-                    "$ref": "form-select.ref.json"
-                  },
-                  {
-                    "$ref": "form-autocomplete.ref.json"
-                  }
-                ]
-              }
-            }
+        "type": "object",
+        "properties": {
+          "id": {
+            "type":"string"
+          },
+          "title": {
+            "type":"string"
+          },
+          "elements": {
+            "$ref": "form-one-of.ref.json"
           }
-        }
+        },
+        "required": [
+          "id",
+          "title",
+          "elements"
+        ]
       }
     }
   },
   "required": [
     "type",
-    "id",
-    "title",
-    "array"
+    "id"
   ]
 }

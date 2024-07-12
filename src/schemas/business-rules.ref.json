@@ -16,8 +16,13 @@
                         "items": {
                             "type": "object",
                             "properties": {
-                                "description": {
-                                    "type": "string"
+                                "subrule": {
+                                    "type": "object",
+                                    "properties": {
+                                        "description": {
+                                            "type": "string"
+                                        }
+                                    }
                                 }
                             }
                         }

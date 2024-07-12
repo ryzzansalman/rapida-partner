@@ -90,7 +90,6 @@
         "dataType",
         "name",
         "label",
-        "placeholder",
         "options"
     ]
 }

@@ -41,9 +41,9 @@ interface IBusinessPLan {
 
 export interface IBusinessRule {
   rule: {
-    description: string;
+    description: "string";
     subrules?: {
-      description: string;
+      description: "string";
     }[];
   };
 }
