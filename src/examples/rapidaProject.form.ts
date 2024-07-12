@@ -8,7 +8,6 @@ export const rapidaProjectForm: IForm = {
     {
       type: "tab",
       id: "projectTab",
-      title: "Projeto",
       tabs: [
         {
           id: "mainTab",

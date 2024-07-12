@@ -6,7 +6,6 @@ import { formTitle } from "./formTitle.form-element";
 export const formTab: IFormTab = {
   type: "tab",
   id: "formTab",
-  title: "Tab de Formulário",
   tabs: [
     {
       id: "mainTab",

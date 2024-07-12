@@ -3,7 +3,7 @@ import type { IForm } from "../interfaces/project.interface";
 export const groupPermissionForm: IForm = {
     id: "groupPermissionForm",
     title: "Componente de grupo de permissão",
-    guards: ['Permeson'],
+    guards: "isAuthorized",
     elements: [
         {
             type: "tab",

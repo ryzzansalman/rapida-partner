@@ -3,7 +3,7 @@ import type { IForm } from "../interfaces/project.interface";
 export const animationForm: IForm = {
     id: "animationForm",
     title: "Componente de animação",
-    guards: ['Permeson'],
+    guards: "isAuthorized",
     elements: [
         {
             type: "tab",

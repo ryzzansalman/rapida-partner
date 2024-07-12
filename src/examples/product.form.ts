@@ -3,6 +3,7 @@ import type { IForm } from "../interfaces/project.interface";
 export const productForm: IForm = {
     id: "productForm",
     title: "Gerenciar produto",
+    guards: "isAuthorized",
     elements: [
         {
             type: "tab",

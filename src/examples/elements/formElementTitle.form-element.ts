@@ -5,6 +5,7 @@ export const formElementTitle: IFormInput = {
   name: "formElementTitle",
   dataType: "text",
   label: "Título",
+  isRequired: true,
   conditions: [
     {
       type: "form",
@@ -13,12 +14,6 @@ export const formElementTitle: IFormInput = {
           key: "formType",
           comparisonOperator: "===",
           value: "array",
-        },
-        {
-          logicalOperator: "||",
-          key: "formType",
-          comparisonOperator: "===",
-          value: "tab",
         },
       ],
     },

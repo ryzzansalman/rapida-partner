@@ -5,6 +5,7 @@ export const formElementId: IFormInput = {
   name: "formElementId",
   dataType: "text",
   label: "Id",
+  isRequired: true,
   conditions: [
     {
       type: "form",

@@ -53,7 +53,7 @@ export interface IForm {
   title: string;
   elements: IFormElement[];
   icon?: string;
-  guards?: string[];
+  guards?: "isAuthenticated" | "isAuthorized";
   businessRules?: IBusinessRule[];
 }
 
