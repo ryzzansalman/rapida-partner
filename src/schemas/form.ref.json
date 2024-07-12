@@ -15,10 +15,13 @@
                 "type": "string"
             },
             "guards": {
-                "type": "array",
-                "items": {
-                    "type": "string"
-                }
+                "type": "string",
+                "enum": [
+                    "isAuthenticated",
+                    "isNotAuthenticated",
+                    "isAuthorized",
+                    "isNotAuthorized"
+                ]
             },
             "businessRules": {
                 "$ref": "business-rules.ref.json"
