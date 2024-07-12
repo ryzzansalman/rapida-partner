@@ -11,13 +11,13 @@ export const formElementId: IFormInput = {
       type: "form",
       elements: [
         {
-          key: "formType",
+          key: "formElementType",
           comparisonOperator: "===",
           value: "array",
         },
         {
           logicalOperator: "||",
-          key: "formType",
+          key: "formElementType",
           comparisonOperator: "===",
           value: "tab",
         },

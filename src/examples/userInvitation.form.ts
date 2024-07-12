@@ -3,7 +3,7 @@ import type { IForm } from "../interfaces/project.interface";
 export const userInvitationForm: IForm = {
     id: "userInvitationForm",
     title: "Gerenciar usuário",
-    guards: ['Permeson'],
+    guards: "isAuthenticated",
     businessRules: [
         {
             rule: {

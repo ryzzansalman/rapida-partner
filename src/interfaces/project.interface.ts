@@ -1,5 +1,6 @@
 import type { IFormArray } from "./form-array.interface";
 import type { IFormAutocomplete } from "./form-autocomplete.interface";
+import type { IFormButton } from "./form-button.interface";
 import type { IFormInput } from "./form-input.interface";
 import type { IFormSelect } from "./form-select.interface";
 import type { IFormTab } from "./form-tab.interface";
@@ -41,9 +42,9 @@ interface IBusinessPLan {
 
 export interface IBusinessRule {
   rule: {
-    description: "string";
+    description: string;
     subrules?: {
-      description: "string";
+      description: string;
     }[];
   };
 }
@@ -69,4 +70,4 @@ interface IModuleElement {
   type: "forms" | "lists" | "displays" | "charts";
 }
 
-export type IFormElement = IFormInput | IFormSelect | IFormAutocomplete | IFormArray | IFormTab;
+export type IFormElement = IFormInput | IFormSelect | IFormAutocomplete | IFormArray | IFormTab | IFormButton;

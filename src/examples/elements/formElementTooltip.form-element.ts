@@ -1,11 +1,10 @@
 import type { IFormInput } from "../../interfaces/form-input.interface";
 
-export const formElementLabel: IFormInput = {
+export const formElementTooltip: IFormInput = {
     type: "input",
     dataType: "text",
-    label: "Label",
-    name: "formElementLabel",
-    isRequired: true,
+    label: "Tooltip",
+    name: "formElementTooltip",
     conditions: [
         {
             type: "form",

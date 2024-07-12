@@ -20,7 +20,7 @@ export interface IFormSelect {
 
 interface ISelectOption {
   label: string;
-  value: string;
+  value: string | number;
   isDisabled?: boolean;
   isSelected?: boolean;
 }

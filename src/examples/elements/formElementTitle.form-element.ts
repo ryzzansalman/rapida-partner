@@ -11,7 +11,7 @@ export const formElementTitle: IFormInput = {
       type: "form",
       elements: [
         {
-          key: "formType",
+          key: "formElementType",
           comparisonOperator: "===",
           value: "array",
         },

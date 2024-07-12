@@ -1,10 +1,10 @@
 import type { IFormSelect } from "../../interfaces/form-select.interface";
 
-export const formElementDatatype: IFormSelect = {
+export const formElementDataType: IFormSelect = {
     type: "select",
     dataType: "text",
-    label: "Label",
-    name: "label",
+    label: "Data type",
+    name: "formElementDataType",
     isRequired: true,
     options: [
         {
@@ -45,13 +45,13 @@ export const formElementDatatype: IFormSelect = {
             type: "form",
             elements: [
                 {
-                    key: "formType",
+                    key: "formElementType",
                     comparisonOperator: "!==",
                     value: "array",
                 },
                 {
                     logicalOperator: "||",
-                    key: "formType",
+                    key: "formElementType",
                     comparisonOperator: "!==",
                     value: "tab",
                 },

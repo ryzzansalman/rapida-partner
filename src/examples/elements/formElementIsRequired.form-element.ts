@@ -1,11 +1,20 @@
-import type { IFormInput } from "../../interfaces/form-input.interface";
+import type { IFormSelect } from "../../interfaces/form-select.interface";
 
-export const formElementLabel: IFormInput = {
-    type: "input",
-    dataType: "text",
-    label: "Label",
-    name: "formElementLabel",
-    isRequired: true,
+export const formElementIsRequired: IFormSelect = {
+    type: "select",
+    dataType: "number",
+    label: "Is required",
+    name: "formElementIsRequired",
+    options: [
+        {
+            label: "Sim",
+            value: 1
+        },
+        {
+            label: "Não",
+            value: 0
+        },
+    ],
     conditions: [
         {
             type: "form",
