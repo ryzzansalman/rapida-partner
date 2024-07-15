@@ -1,7 +1,7 @@
 import { type IProject } from '../interfaces/project.interface'
 import { ofmBackofficeCompanyForm } from './elements/forms/ofmBackofficeCompany.form';
 import { ofmBackofficeCompanyList } from './elements/lists/ofmBackofficeCompany.list';
-import { userInvitationForm } from './userInvitation.form';
+import { userInvitationForm } from './elements/forms/userInvitation.form';
 import { userInvitationList } from './elements/lists/userInvitation.list';
 export const ofmBackoffice: IProject = {
   id: "ofmBackoffice",

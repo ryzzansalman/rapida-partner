@@ -33,12 +33,12 @@ interface IBackend {
 }
 
 interface IBusinessPLan {
-  businessValue: string;
-  targetMarket: string;
-  benchmarkings: string;
-  legalIssues: string;
-  ethicalIssues: string;
-  afterSales: string;
+  businessValue: string,
+  targetMarket: string,
+  benchmarkings: string,
+  legalIssues: string,
+  ethicalIssues: string,
+  afterSales: string
 }
 
 export interface IBusinessRule {
@@ -71,11 +71,4 @@ interface IModuleElement {
   type: "forms" | "lists" | "displays" | "charts";
 }
 
-export type IFormElement =
-  | IFormInput
-  | IFormSelect
-  | IFormAutocomplete
-  | IFormArray
-  | IFormTab
-  | IFormFieldset
-  | IFormButton;
+export type IFormElement = IFormInput | IFormSelect | IFormAutocomplete | IFormArray | IFormTab | IFormFieldset | IFormButton;

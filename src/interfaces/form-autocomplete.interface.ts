@@ -20,7 +20,7 @@ export interface IFormAutocomplete {
 }
 
 interface IOptionsApi {
-  endpoint?: string;
+  endpoint: string;
   labelField: string[];
   valueField: string;
   paramsToFilter: string[];

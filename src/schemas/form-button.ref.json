@@ -18,27 +18,22 @@
       "type": "string"
     },
     "todo": {
-      "type": "string",
-      "nullable": true
+      "type": "string"
     },
     "icon": {
-      "type": "string",
-      "nullable": true
+      "type": "string"
+    },
+    "tooltip": {
+      "type": "string"
     },
     "isDisabled": {
-      "type": "boolean",
-      "nullable": true
+      "type": "boolean"
     },
     "conditions": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/IFormCondition"
-      },
-      "nullable": true
+      "$ref": "form-common-conditions.ref.json"
     },
     "apiRequest": {
-      "$ref": "#/definitions/IApiRequest",
-      "nullable": true
+      "$ref": "form-common-api-request.ref.json"
     }
   },
   "required": ["type", "id", "label", "actionType"]

@@ -8,4 +8,4 @@ export interface IFormFieldset {
   id: string;
   title: string;
   elements: IFormElement[];
-};
+}

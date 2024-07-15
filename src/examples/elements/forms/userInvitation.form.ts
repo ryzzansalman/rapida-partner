@@ -1,4 +1,13 @@
-import type { IForm } from "../interfaces/project.interface";
+import type { IForm } from "../../../interfaces/project.interface";
+import { invitationEmail } from "./inputs/email/invitationEmail.form-element";
+import { personName } from "./inputs/names/personName.form-element";
+import { userStatus } from "./inputs/status/userStatus.form-element";
+import { username } from "./inputs/username.form-element";
+
+const newPersonName = { ...personName, isRequired: true };
+const newUsername = { ...username, isRequired: true };
+const newInvitationEmail = { ...invitationEmail, isRequired: true };
+const newUserStatus = { ...userStatus, isRequired: true };
 
 export const userInvitationForm: IForm = {
     id: "userInvitationForm",
@@ -38,46 +47,9 @@ export const userInvitationForm: IForm = {
         }
     ],
     elements: [
-        {
-            type: "input",
-            name: "name",
-            label: "Nome",
-            dataType: "text",
-            isRequired: true
-        },
-        {
-            type: "input",
-            name: "username",
-            label: "Nome de usuário",
-            dataType: "text",
-            isRequired: true
-        },
-        {
-            type: "input",
-            name: "invitationEmail",
-            label: "E-mail para convite",
-            dataType: "email",
-            isRequired: true
-        },
-        {
-            type: "select",
-            dataType: "text",
-            label: "Status",
-            name: "status",
-            options: [
-                {
-                    label: "Ativo",
-                    value: "active",
-                },
-                {
-                    label: "Bloqueado",
-                    value: "blocked"
-                },
-                {
-                    label: "Inativo",
-                    value: "inactive"
-                }
-            ]
-        }
+        newPersonName,
+        newUsername,
+        newInvitationEmail,
+        newUserStatus
     ]
 }
