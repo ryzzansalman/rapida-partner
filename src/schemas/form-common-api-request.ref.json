@@ -21,7 +21,7 @@
         "formFieldsFilledByApiResponse": {
             "$ref": "form-common-form-fields-filled-by-api-response.ref.json"
         },
-        "usesAuthentication": {
+        "hasAuthentication": {
             "type": "boolean"
         }
     },

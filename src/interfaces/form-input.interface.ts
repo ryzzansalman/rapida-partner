@@ -26,5 +26,5 @@ export interface IApiRequest {
   isNotKunlatekResponse?: boolean;
   filtersFromOtherFormFields?: IApiResponseFieldFilter[];
   formFieldsFilledByApiResponse?: IApiResponseField[];
-  usesAuthentication?: boolean;
+  hasAuthentication?: boolean;
 }

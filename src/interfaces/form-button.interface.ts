@@ -3,10 +3,12 @@ import type { IApiRequest } from "./form-input.interface";
 
 export interface IFormButton {
     type: "button";
-    actionType: "submit" | "link" | "reset" | "sendEmail" | "apiRequest";
     id: string;
+    actionType: "submit" | "reset" | "link" | "apiRequest";
     label: string;
-    apiRequest?: IApiRequest;
+    todo?: string;
     icon?: string;
+    isDisabled?: boolean;
     conditions?: IFormCondition[];
+    apiRequest?: IApiRequest;
 }

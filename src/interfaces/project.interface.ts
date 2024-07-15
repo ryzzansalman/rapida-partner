@@ -1,6 +1,7 @@
 import type { IFormArray } from "./form-array.interface";
 import type { IFormAutocomplete } from "./form-autocomplete.interface";
 import type { IFormButton } from "./form-button.interface";
+import type { IFormFieldset } from "./form-fieldset.interface";
 import type { IFormInput } from "./form-input.interface";
 import type { IFormSelect } from "./form-select.interface";
 import type { IFormTab } from "./form-tab.interface";
@@ -32,12 +33,12 @@ interface IBackend {
 }
 
 interface IBusinessPLan {
-  businessValue: string,
-  targetMarket: string,
-  benchmarkings: string,
-  legalIssues: string,
-  ethicalIssues: string,
-  afterSales: string
+  businessValue: string;
+  targetMarket: string;
+  benchmarkings: string;
+  legalIssues: string;
+  ethicalIssues: string;
+  afterSales: string;
 }
 
 export interface IBusinessRule {
@@ -70,4 +71,11 @@ interface IModuleElement {
   type: "forms" | "lists" | "displays" | "charts";
 }
 
-export type IFormElement = IFormInput | IFormSelect | IFormAutocomplete | IFormArray | IFormTab | IFormButton;
+export type IFormElement =
+  | IFormInput
+  | IFormSelect
+  | IFormAutocomplete
+  | IFormArray
+  | IFormTab
+  | IFormFieldset
+  | IFormButton;

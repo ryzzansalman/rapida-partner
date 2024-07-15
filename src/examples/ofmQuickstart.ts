@@ -1,8 +1,8 @@
 import { type IProject } from '../interfaces/project.interface'
-import { groupPermissionForm } from './groupPermission.form';
+import { groupPermissionForm } from './elements/forms/groupPermission.form';
 import { groupPermissionList } from './groupPermission.list';
 import { userInvitationForm } from './userInvitation.form';
-import { userInvitationList } from './userInvitation.list';
+import { userInvitationList } from './elements/lists/userInvitation.list';
 export const ofmQuickstart: IProject = {
   id: "ofmQuickstart",
   description: `___ 

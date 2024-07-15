@@ -1,0 +1,25 @@
+{
+  "$id": "form-fieldset.ref.json",
+  "type": "object",
+  "properties": {
+    "type": {
+      "const": "fieldset"
+    },
+    "conditions": {
+      "$ref": "form-common-conditions.ref.json"
+    },
+    "todo": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "elements": {
+      "$ref": "form-one-of.ref.json"
+    }
+  },
+  "required": ["type", "id", "title"]
+}

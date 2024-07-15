@@ -20,6 +20,9 @@
         "$ref": "form-tab.ref.json"
       },
       {
+        "$ref": "form-fieldset.ref.json"
+      },
+      {
         "$ref": "form-button.ref.json"
       }
     ]

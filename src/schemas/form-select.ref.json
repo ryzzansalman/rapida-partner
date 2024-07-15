@@ -69,7 +69,7 @@
                         "type": "string"
                     },
                     "value": {
-                        "type": ["string", "number"]
+                        "type": ["string", "number", "boolean"]
                     },
                     "isDisabled": {
                         "type": "boolean"

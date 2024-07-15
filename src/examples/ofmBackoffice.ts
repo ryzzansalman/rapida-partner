@@ -1,8 +1,8 @@
 import { type IProject } from '../interfaces/project.interface'
-import { ofmBackofficeCompanyForm } from './ofmBackofficeCompany.form';
-import { ofmBackofficeCompanyList } from './ofmBackofficeCompany.list';
+import { ofmBackofficeCompanyForm } from './elements/forms/ofmBackofficeCompany.form';
+import { ofmBackofficeCompanyList } from './elements/lists/ofmBackofficeCompany.list';
 import { userInvitationForm } from './userInvitation.form';
-import { userInvitationList } from './userInvitation.list';
+import { userInvitationList } from './elements/lists/userInvitation.list';
 export const ofmBackoffice: IProject = {
   id: "ofmBackoffice",
   description: `O projeto OFM Backoffice tem por objetivo gerenciar módulos que sirvam como base de dados e informações relacionados à Plataforma OFM, como, por exemplo, o cadastro de aplicações e módulos que servem de base para a viabilidade do sistema de permissões que estará presente nos produtos OFM, o controle de usuários dos produtos OFM e a interface de auditoria dos sistemas. Ao abordar desafios críticos como a complexidade na administração de múltiplas aplicações e a necessidade de um controle refinado de acessos, o OFM Backoffice garante eficiência operacional, segurança reforçada e conformidade com regulamentos de proteção de dados.

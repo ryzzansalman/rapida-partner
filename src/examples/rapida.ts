@@ -1,5 +1,6 @@
 import type { IProject } from "../interfaces/project.interface";
-import { rapidaProjectForm } from "./rapidaProject.form";
+import { rapidaForm } from "./elements/forms/rapidaForm.form";
+import { rapidaProjectForm } from "./elements/forms/rapidaProject.form";
 
 export const rapida: IProject = {
   id: "rapida",
@@ -17,10 +18,10 @@ A principal inovação do Rapida reside em sua capacidade de reduzir drasticamen
           },
           {
             description: `A ferramenta deve permitir a customização e extensão do código gerado, para atender às necessidades específicas de cada projeto.`,
-          }
-        ]
-      }
-    }
+          },
+        ],
+      },
+    },
   ],
   businessPlan: {
     businessValue: `___
@@ -66,7 +67,7 @@ A principal inovação do Rapida reside em sua capacidade de reduzir drasticamen
 1. **Documentação e Suporte**: Fornecer documentação abrangente e suporte para os usuários, ajudando-os a entender e modificar o código gerado, se necessário.
 2. **Atualizações e Manutenção**: Estabelecer um plano para atualizações regulares e manutenção do software, garantindo que ele permaneça compatível com novas versões de sistemas operacionais, frameworks e bibliotecas.
 3. **Feedback e Melhoria Contínua**: Criar um canal de feedback para os usuários e implementar um processo de melhoria contínua baseado nas sugestões e necessidades dos usuários.
-4. **Treinamento e Recursos Educacionais**: Oferecer treinamento e recursos educacionais para auxiliar os desenvolvedores a entenderem melhor como trabalhar com o código gerado e como integrá-lo em seus próprios projetos.`
+4. **Treinamento e Recursos Educacionais**: Oferecer treinamento e recursos educacionais para auxiliar os desenvolvedores a entenderem melhor como trabalhar com o código gerado e como integrá-lo em seus próprios projetos.`,
   },
   frontend: {
     framework: "svelte",
@@ -90,8 +91,8 @@ A principal inovação do Rapida reside em sua capacidade de reduzir drasticamen
           id: "projectList",
           type: "lists",
         },
-      ]
-    }
+      ],
+    },
   ],
-  forms: [rapidaProjectForm]
-}
+  forms: [rapidaProjectForm, rapidaForm],
+};

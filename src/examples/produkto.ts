@@ -1,6 +1,6 @@
 import type { IProject } from "../interfaces/project.interface";
-import { productForm } from "./product.form";
-import { productList } from "./product.list";
+import { productForm } from "./elements/forms/product.form";
+import { productList } from "./elements/lists/product.list";
 
 export const produkto: IProject = {
     id: "produkto",

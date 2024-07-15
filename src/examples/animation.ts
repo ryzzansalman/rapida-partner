@@ -1,6 +1,6 @@
 import { type IProject } from '../interfaces/project.interface'
-import { animationForm } from './animation.form';
-import { animationList } from './animation.list';
+import { animationForm } from './elements/forms/animation.form';
+import { animationList } from './elements/lists/animation.list';
 export const animation: IProject = {
   id: "animation",
   description: "Gerar uma base de dados para ",
