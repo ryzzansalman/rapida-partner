@@ -13,6 +13,7 @@ export interface IProject {
   description: string;
   businessPlan?: IBusinessPLan;
   businessRules?: IBusinessRule[];
+  flow: "autentikigo" | "permeson" | "komerco"
   frontend?: IFrontend;
   backend?: IBackend;
   modules?: IModule[];

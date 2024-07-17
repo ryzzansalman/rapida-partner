@@ -12,6 +12,14 @@
     "description": {
       "type": "string"
     },
+    "flow": {
+      "type": "string",
+      "enum": [
+        "autentikigo",
+        "permeson",
+        "komerco"
+      ]
+    },
     "businessPlan": {
       "$ref": "business-plan.ref.json"
     },
