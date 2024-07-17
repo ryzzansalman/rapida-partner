@@ -3,9 +3,9 @@ import { formElements } from "../arrays/formElements.form-element";
 import { formId } from "../inputs/formId.form-element";
 import { formTitle } from "../inputs/formTitle.form-element";
 
-export const formTab: IFormTab = {
+export const formTabs: IFormTab = {
   type: "tab",
-  id: "formTab",
+  id: "formTabs",
   tabs: [
     {
       id: "mainTab",

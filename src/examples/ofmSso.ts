@@ -1,4 +1,6 @@
-import type { IProject } from "../../../interfaces/project.interface";
+import type { IProject } from "../interfaces/project.interface";
+import { ofmLoginSsoForm } from "./elements/forms/ofmSsoLogin.form";
+import { userSignupForm } from "./elements/forms/userSignup.form";
 
 export const ofmSso: IProject = {
     id: "ofmSso",
@@ -55,94 +57,7 @@ export const ofmSso: IProject = {
         },
     ],
     forms: [
-        {
-            id: "registerForm",
-            title: "Formulário de registro",
-            elements: [
-                {
-                    type: "input",
-                    dataType: "text",
-                    label: "Nome",
-                    name: "name",
-                    isRequired: true
-                },
-                {
-                    type: "input",
-                    dataType: "text",
-                    label: "Usuário",
-                    name: "userName",
-                    isRequired: true,
-                    isUnique: true,
-                },
-                {
-                    type: "input",
-                    dataType: "email",
-                    label: "E-mail",
-                    name: "invitationemail",
-                    isRequired: true
-                },
-                {
-                    type: "input",
-                    dataType: "password",
-                    label: "Senha",
-                    name: "password",
-                    isRequired: true
-                },
-                {
-                    type: "input",
-                    dataType: "password",
-                    label: "Repetir senha",
-                    name: "repeatPassword",
-                    isRequired: true
-                },
-                {
-                    type: "button",
-                    id: "sendEmail",
-                    actionType: "apiRequest",
-                    label: "Receber e-mail",
-                    icon: "send",
-                    apiRequest: {
-                        endpoint: "/send-email",
-                        paramType: "path",
-                    }
-                }
-            ],
-            businessRules: [
-                {
-                    rule: {
-                        description: "Ao preencher o cadastro, os dados não serão enviados ao banco de dados.",
-                        subrules: [
-                            {
-                                description: "Um email será enviado para o email preenchido na área de cadastro."
-                            },
-                            {
-                                description: "No email envaiado haverá um link com jwt onde o usuário deverá clicar se quiser executar de fato o cadastro."
-                            },
-                            {
-                                description: "O link levará a um endpoint que validará o token e dentro deste token estará contido os dados que o usuário preencheu no formulário de cadastro, que servirão para executar o cadastro."
-                            }
-                        ]
-                    }
-                },
-                {
-                    rule: {
-                        description: "O usuário recém-cadastrado precisa esperar passar a ter status `ativo` para poder acessar.",
-                        subrules: [
-                            {
-                                description: "Ao se cadastrar ele  inicia com status inativo."
-                            },
-                            {
-                                description: "O status dele será alterado para ativo ou bloqueado pelo administrador de sua empresa."
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            id: "loginForm",
-            title: "Login",
-            elements: []
-        }
+        userSignupForm,
+        ofmLoginSsoForm
     ]
 }
