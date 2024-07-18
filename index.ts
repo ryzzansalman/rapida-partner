@@ -1,12 +1,12 @@
 import { tsProjectToJsonProject } from './src/controllers/ts_project_to_json_project';
 import { validateProjectJson } from './src/utils/json';
 
-import { animation } from './src/examples/animation';
+import { ofmBackoffice } from './src/examples/ofmBackoffice';
 
 /**
  * ts to json
  */
-const tsToJson = tsProjectToJsonProject(animation);
+const tsToJson = tsProjectToJsonProject(ofmBackoffice);
 
 /**
  * validate project json schema

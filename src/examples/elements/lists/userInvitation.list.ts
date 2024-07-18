@@ -4,13 +4,13 @@ export const userInvitationList: IList = {
     id: "userInvitationList",
     title: "Lista de usuários",
     dataSource: {
-        endpoint: "/users",
+        endpoint: "/sso-users",
         paramType: "query",
         hasAuthentication: true
     },
     guards: ['Permeson'],
     properties: [
-        { property: "name", type: "title" },
+        { property: "personName", type: "title" },
         { property: "username", type: "subtitle", isTimestamp: true, }
     ],
     callsToActionMenu: [
@@ -19,7 +19,7 @@ export const userInvitationList: IList = {
             label: "Editar",
             action: {
                 link: {
-                    endpoint: "/user-form",
+                    endpoint: "/sso-user-form",
                     propertiesAsQueryParam: ["_id"]
                 }
             },
@@ -29,7 +29,7 @@ export const userInvitationList: IList = {
             label: "Excluir",
             action: {
                 request: {
-                    endpoint: "/users",
+                    endpoint: "/sso-users",
                     verb: "delete",
                     propertiesAsPathParam: ["_id"],
                     dialog: {
@@ -38,7 +38,7 @@ export const userInvitationList: IList = {
                     }
                 },
                 link: {
-                    endpoint: "/user-list",
+                    endpoint: "/sso-user-list",
                 },
             },
         },
