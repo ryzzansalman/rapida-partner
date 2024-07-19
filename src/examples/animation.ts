@@ -5,6 +5,7 @@ export const animation: IProject = {
   id: "animation",
   description: "Gerar uma base de dados para ",
   title: "Animação",
+  flow: "permeson",
   businessPlan: {
     businessValue: ``,
     targetMarket: ``,

@@ -4,6 +4,7 @@ import { userSignupForm } from "./elements/forms/userSignup.form";
 
 export const ofmSso: IProject = {
     id: "ofmSso",
+    flow: "autentikigo",
     description: "O projeto OFM SSO é uma solução inovadora de autenticação que integra e simplifica o acesso a múltiplos módulos do ERP da OFM Systems, eliminando a necessidade de logins repetidos e a redundância de dados de usuários. Com o SSO OFM, empresas poderão oferecer uma experiência de usuário mais eficiente e segura, centralizando a gestão de credenciais e aplicando políticas de segurança de forma consistente em todos os módulos. Essa unificação não apenas aumenta a produtividade dos funcionários, mas também reduz os custos operacionais e melhora a segurança da informação.",
     title: "OFM SSO",
     businessPlan: {
