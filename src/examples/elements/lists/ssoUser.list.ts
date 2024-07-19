@@ -1,17 +1,17 @@
 import type { IList } from "../../../interfaces/list.interface";
 
-export const groupPermissionList: IList = {
-    id: "groupPermissionList",
-    title: "Lista de grupos de permissões",
+export const ssoUserList: IList = {
+    id: "ssoUserList",
+    title: "Lista de usuários",
     dataSource: {
-        endpoint: "/permissions-groups",
+        endpoint: "/users",
         paramType: "query",
         hasAuthentication: true
     },
     guards: ['Permeson'],
     properties: [
-        { property: "groupPermissionName", type: "title" },
-        { property: "cnpj", type: "subtitle", isTimestamp: true, }
+        { property: "personName", type: "title" },
+        { property: "username", type: "subtitle", isTimestamp: true, }
     ],
     callsToActionMenu: [
         {
@@ -19,7 +19,7 @@ export const groupPermissionList: IList = {
             label: "Editar",
             action: {
                 link: {
-                    endpoint: "/permission-group-form",
+                    endpoint: "/user-form",
                     propertiesAsQueryParam: ["_id"]
                 }
             },
@@ -29,16 +29,16 @@ export const groupPermissionList: IList = {
             label: "Excluir",
             action: {
                 request: {
-                    endpoint: "/permissions-groups",
+                    endpoint: "/users",
                     verb: "delete",
                     propertiesAsPathParam: ["_id"],
                     dialog: {
-                        title: "Excluir grupo de permissão",
-                        message: "Confirmar exclusão de grupo de permissão?"
+                        title: "Excluir usuário",
+                        message: "Confirmar exclusão de usuário?"
                     }
                 },
                 link: {
-                    endpoint: "/permission-group-list",
+                    endpoint: "/user-list",
                 },
             },
         },

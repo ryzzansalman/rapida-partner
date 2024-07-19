@@ -11,7 +11,7 @@ export const animationList: IList = {
     },
     properties: [
         { property: "folderPicture", type: "image" },
-        { property: "name", type: "title" },
+        { property: "animationName", type: "title" },
         { property: "startDate", type: "subtitle", isTimestamp: true, },
         { property: "finishDate", type: "subtitle", isTimestamp: true, },
     ],

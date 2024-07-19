@@ -1,8 +1,8 @@
 import type { IFormInput } from "../../../../../interfaces/form-input.interface";
 
-export const description: IFormInput ={
+export const applicationDescription: IFormInput ={
   type: "input",
   dataType: "wysiwyg",
-  name: "description",
-  label: "Descrição",
+  name: "applicationDescription",
+  label: "Descrição da aplicação",
 };

@@ -13,7 +13,9 @@ export interface IProject {
   description: string;
   businessPlan?: IBusinessPLan;
   businessRules?: IBusinessRule[];
-  flow: "autentikigo" | "permeson" | "komerco"
+  flow: "autentikigo" // Meaning it will have a login as main screen
+  | "permeson" // Meaning it will have a login as main screen and a permission manager component which authorized users will be able to access
+  | "komerco" // Meaning it will have a products component to e-commerce as main screen and a cart component that will be available to non-authenticated users, but they are only allowed to pay if they are authenticated
   frontend?: IFrontend;
   backend?: IBackend;
   modules?: IModule[];

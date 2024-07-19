@@ -3,6 +3,10 @@ import { ofmBackofficeCompanyForm } from './elements/forms/ofmBackofficeCompany.
 import { ofmBackofficeCompanyList } from './elements/lists/ofmBackofficeCompany.list';
 import { userInvitationForm } from './elements/forms/userInvitation.form';
 import { userInvitationList } from './elements/lists/userInvitation.list';
+import { applicationForm } from './elements/forms/application.form';
+import { applicationList } from './elements/lists/application.list';
+import { ssoUserForm } from './elements/forms/ssoUserForm.form';
+import { ssoUserList } from './elements/lists/ssoUser.list';
 
 export const ofmBackoffice: IProject = {
   id: "ofmBackoffice",
@@ -10,6 +14,7 @@ export const ofmBackoffice: IProject = {
 
 Investir no OFM Backoffice é apostar em uma plataforma robusta que não apenas otimiza a gestão interna, mas também potencializa a segurança e a auditoria de sistemas, fatores essenciais para empresas modernas que lidam com informações sensíveis.`,
   title: "OFM Backoffice",
+  flow: "permeson",
   businessPlan: {
     businessValue: `___
 ### Gestão Centralizada de Aplicações e Módulos 
@@ -145,6 +150,6 @@ Manter uma comunicação contínua com os usuários e stakeholders para informá
       ]
     }
   ],
-  forms: [userInvitationForm, ofmBackofficeCompanyForm],
-  lists: [userInvitationList, ofmBackofficeCompanyList]
+  forms: [userInvitationForm, ofmBackofficeCompanyForm, applicationForm, ssoUserForm],
+  lists: [userInvitationList, ofmBackofficeCompanyList, applicationList, ssoUserList]
 };
