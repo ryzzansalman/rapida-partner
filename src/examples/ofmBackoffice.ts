@@ -148,8 +148,41 @@ Manter uma comunicação contínua com os usuários e stakeholders para informá
           type: "lists"
         }
       ]
+    },
+    {
+      id: "applicationModule",
+      title: "Aplicações",
+      icon: "",
+      elements: [
+        {
+          id: "applicationForm",
+          type: "forms"
+        },
+        {
+          id: "applicationList",
+          type: "lists"
+        }
+
+      ]
+    },
+    {
+      id: "ssoUserModule",
+      title: "Ususário SSO",
+      icon: "",
+      elements: [
+        {
+          id: "ssoUserForm",
+          type: "forms"
+        },
+        {
+          id: "ssoUserList",
+          type: "lists"
+        }
+
+      ]
     }
   ],
   forms: [userInvitationForm, ofmBackofficeCompanyForm, applicationForm, ssoUserForm],
   lists: [userInvitationList, ofmBackofficeCompanyList, applicationList, ssoUserList]
 };
+
