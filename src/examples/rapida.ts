@@ -5,6 +5,7 @@ import { rapidaProjectForm } from "./elements/forms/rapidaProject.form";
 export const rapida: IProject = {
   id: "rapida",
   title: "Rapida",
+  flow: "autentikigo",
   description: `O projeto Rapida representa uma solução revolucionária no campo do desenvolvimento de software, atuando como uma ferramenta de automação para a geração de código. Projetado para facilitar e agilizar a criação de aplicações web e mobile, o Rapida permite que desenvolvedores e equipes de TI gerem rapidamente projetos completos, módulos específicos e componentes de interface do usuário, como listagens e formulários. Sua compatibilidade com diversas tecnologias, incluindo frameworks populares como Flutter e Angular, torna a Rapida uma ferramenta versátil e adaptável, ideal para uma ampla gama de projetos de desenvolvimento.
 
 A principal inovação do Rapida reside em sua capacidade de reduzir drasticamente o tempo de desenvolvimento, promovendo uma padronização consistente e reduzindo os erros humanos no processo de codificação. Isso é especialmente valioso em um mercado onde a rapidez no lançamento de produtos e a eficiência operacional são cruciais para o sucesso comercial. Para startups e empreendedores, a Rapida oferece a capacidade de prototipar e testar ideias rapidamente, enquanto agências digitais e grandes corporações podem utilizar a ferramenta para acelerar a entrega de projetos complexos, mantendo a alta qualidade e a escalabilidade.`,

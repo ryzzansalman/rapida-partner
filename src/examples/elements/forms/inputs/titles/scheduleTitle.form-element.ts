@@ -1,8 +1,8 @@
 import type { IFormInput } from "../../../../../interfaces/form-input.interface";
 
-export const projectTitle: IFormInput = {
+export const scheduleTitle: IFormInput = {
   type: "input",
-  name: "projectTitle",
+  name: "scheduleTitle",
   dataType: "text",
-  label: "Título do projeto",
+  label: "Título da agenda",
 };

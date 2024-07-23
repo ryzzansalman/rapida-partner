@@ -1,8 +1,8 @@
 import type { IFormInput } from "../../../../../interfaces/form-input.interface";
 
-export const ruleDescription: IFormInput = {
+export const scheduleDescription: IFormInput = {
   type: "input",
   dataType: "wysiwyg",
-  name: "ruleDescription",
-  label: "Descrição da regra",
+  name: "scheduleDescription",
+  label: "Descrição da agenda",
 };

@@ -4,6 +4,6 @@ export const formElementTitle: IFormInput = {
   type: "input",
   name: "formElementTitle",
   dataType: "text",
-  label: "Título",
+  label: "Título do elemento de formulário",
   isRequired: true,
 };
