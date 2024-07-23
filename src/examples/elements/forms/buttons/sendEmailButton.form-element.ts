@@ -4,7 +4,7 @@ export const sendEmailButton: IFormButton = {
     type: "button",
     id: "sendEmailButton",
     actionType: "apiRequest",
-    label: "Receber e-mail",
+    label: "Enviar e-mail",
     icon: "send",
     apiRequest: {
         endpoint: "/send-email",

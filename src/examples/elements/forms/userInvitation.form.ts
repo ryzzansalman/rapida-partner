@@ -1,4 +1,5 @@
 import type { IForm } from "../../../interfaces/project.interface";
+import { sendEmailButton } from "./buttons/sendEmailButton.form-element";
 import { invitationEmail } from "./inputs/email/invitationEmail.form-element";
 import { personName } from "./inputs/names/personName.form-element";
 import { userStatus } from "./inputs/status/userStatus.form-element";
@@ -50,6 +51,7 @@ export const userInvitationForm: IForm = {
         newPersonName,
         newUsername,
         newInvitationEmail,
-        newUserStatus
+        newUserStatus,
+        sendEmailButton
     ]
 }
