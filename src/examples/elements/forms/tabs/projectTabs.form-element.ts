@@ -14,6 +14,10 @@ import { database } from "../selects/database.form-element";
 import { frontendFramework } from "../selects/frontendFramework.form-element";
 import { frontendUiKit } from "../selects/frontendUiKit.form-element";
 
+const newProjectId = { ...projectId, isRequired: true };
+const newProjectTitle = { ...projectTitle, isRequired: true };
+const newProjectDescription = { ...projectDescription, isRequired: true };
+
 export const projectTabs: IFormTab = {
     type: "tab",
     id: "projectTabs",
@@ -22,9 +26,9 @@ export const projectTabs: IFormTab = {
         id: "mainTab",
         title: "Dados principais",
         elements: [
-          projectId,
-          projectTitle,
-          projectDescription,
+          newProjectId,
+          newProjectTitle,
+          newProjectDescription,
         ],
       },
       {

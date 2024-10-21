@@ -11,6 +11,5 @@ export const frontendFramework: IFormSelect = {
     { label: "React", value: "react" },
     { label: "Svelte", value: "svelte" },
     { label: "Vue", value: "vue" },
-  ],
-  isRequired: true,
+  ]
 };

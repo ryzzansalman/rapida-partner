@@ -38,9 +38,7 @@ export const animationTabs: IFormTab = {
                     elements: [
                         seasonBrief,
                         charactersOnSeason,
-                        episodes
-
-                        ,
+                        episodes,
                     ]
                 }
             ]

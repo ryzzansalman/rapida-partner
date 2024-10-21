@@ -17,7 +17,8 @@
         "email",
         "color",
         "date",
-        "file"
+        "file",
+        "wysiwyg"
       ]
     },
     "label": {
