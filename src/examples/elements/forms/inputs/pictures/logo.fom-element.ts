@@ -1,8 +1,7 @@
-import type { IFormInput } from "../../../../../interfaces/form-input.interface";
+import type { IFormFile } from "../../../../../interfaces/form-file.interface";
 
-export const logo: IFormInput = {
-    type: "input",
-    dataType: "file",
+export const logo: IFormFile = {
+    type: "file",
     label: "Logomarca",
     name: "logo",
 };

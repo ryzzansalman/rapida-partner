@@ -1,4 +1,8 @@
-import type { IProject } from "../interfaces/project.interface";
+import type { IProject } from "../../interfaces/project.interface";
+import { customerPersonForm } from "./components/customerPerson.form";
+import { customerModule } from "./modules/customer";
+import { projectModule } from "./modules/project";
+import { realEstateModule } from "./modules/realEstate";
 
 const mezuri: IProject = {
   id: "mezuri",
@@ -22,20 +26,11 @@ const mezuri: IProject = {
     database: "mongodb"
   },
   modules: [
-    {
-      id: "animationModule",
-      title: "Módulo de animação",
-      icon: "",
-      elements: [
-        {
-          id: "animationForm",
-          type: "forms"
-        },
-        {
-          id: "characterForm",
-          type: "forms"
-        }
-      ]
-    }
+    customerModule,
+    realEstateModule,
+    projectModule
   ],
+  forms: [
+    customerPersonForm
+  ]
 };

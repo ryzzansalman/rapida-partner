@@ -1,6 +1,6 @@
 import type { IModule } from "../../../interfaces/project.interface";
 
-export const realEstate: IModule = {
+export const realEstateModule: IModule = {
   id: "realEstateModule",
   title: "Imóveis",
   icon: "real_estate_agent",

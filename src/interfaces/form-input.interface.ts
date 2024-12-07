@@ -4,7 +4,7 @@ import type { IFormCondition } from "./form-condition.interface";
 export interface IFormInput {
   type: "input";
   name: string;
-  dataType: "text" | "number" | "password" | "email" | "color" | "date" | "file" | "wysiwyg";
+  dataType: "text" | "number" | "password" | "email" | "color" | "date" | "wysiwyg";
   label: string;
   placeholder?: string;
   tooltip?: string;
@@ -13,7 +13,7 @@ export interface IFormInput {
   isRequired?: boolean;
   isUnique?: boolean;
   conditions?: IFormCondition[];
-  validators?: ("cpf" | "cnpj")[];
+  validators?: ("cep" |"cpf" | "cnpj" | "onlyNumbers" | "phone")[];
   todo?: string;
   maxlength?: number;
   minLength?: number;

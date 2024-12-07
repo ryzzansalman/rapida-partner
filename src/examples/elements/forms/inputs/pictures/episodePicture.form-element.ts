@@ -1,8 +1,7 @@
-import type { IFormInput } from "../../../../../interfaces/form-input.interface";
+import type { IFormFile } from "../../../../../interfaces/form-file.interface";
 
-export const episodePicture: IFormInput = {
-    type: "input",
+export const episodePicture: IFormFile = {
+    type: "file",
     label: "Foto do episódio",
     name: "episodePicture",
-    dataType: "file"
 };

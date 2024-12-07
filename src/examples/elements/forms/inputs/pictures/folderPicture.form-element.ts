@@ -1,8 +1,7 @@
-import type { IFormInput } from "../../../../../interfaces/form-input.interface";
+import type { IFormFile } from "../../../../../interfaces/form-file.interface";
 
-export const folderPicture: IFormInput = {
-    type: "input",
-    dataType: "file",
+export const folderPicture: IFormFile = {
+    type: "file",
     label: "Foto de capa",
     name: "folderPicture",
 };

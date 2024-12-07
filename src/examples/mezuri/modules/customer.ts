@@ -6,20 +6,20 @@ export const customerModule: IModule = {
   icon: "groups",
   elements: [
     {
-      id: "customerForm",
+      id: "customerPersonForm",
       type: "forms"
     },
     {
-      id: "customerList",
+      id: "customerPersonList",
       type: "lists"
     },
     {
-      id: "customerDisplay",
-      type: "displays"
+      id: "customerCompanyForm",
+      type: "forms"
     },
     {
-      id: "customerChart",
-      type: "charts"
-    }
+      id: "customerCompanyList",
+      type: "lists"
+    },
   ]
 };
