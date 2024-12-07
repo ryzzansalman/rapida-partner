@@ -3,7 +3,7 @@ import type { IFormAutocomplete } from "../../../../interfaces/form-autocomplete
 export const tags: IFormAutocomplete = {
   type: "autocomplete",
   dataType: "text",
-  label: "Tags",
+  label: "Tags relacionadas",
   name: "tags",
   optionsApi: {
     endpoint: "/api/tags",

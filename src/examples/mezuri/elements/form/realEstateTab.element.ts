@@ -1,5 +1,13 @@
 import type { IFormTab } from "../../../../interfaces/form-tab.interface";
+import { realEstateAverageWindPowerGeneration } from "./averageWindPowerGeneration";
+import { realEstateArea } from "./realEstateArea";
+import { realEstateAverageSolarPowerGeneration } from "./realEstateAverageSolarPowerGeneration";
+import { realEstateDescription } from "./realEstateDescription.element";
+import { realEstateEnergySystem } from "./realEstateEnergySystem.element";
 import { realEstateName } from "./realEstateName";
+import { realEstatePictures } from "./realEstatePictures.element";
+import { realEstateWaterSupply } from "./realEstateProductActivityWaterSupply";
+import { tags } from "./tags.element";
 
 export const realEstateTab: IFormTab = {
   type: "tab",
@@ -8,10 +16,10 @@ export const realEstateTab: IFormTab = {
     {
       id: "realEstateMainDataTab",
       title: "Dados principais",
-      elements: [realEstateName, realEstateDescription, realEstateValue, realEstateArea, realEstateRooms, realEstateBathrooms, realEstateGarageSpaces, realEstateFloor, realEstateCondominiumValue, realEstateIptuValue, realEstatePictures],
+      elements: [realEstateName, realEstateDescription, realEstateArea, realEstatePictures, realEstateEnergySystem, realEstateWaterSupply, realEstateAverageSolarPowerGeneration, realEstateAverageWindPowerGeneration, tags],
     },
     {
-      id: "personDocumentTab",
+      id: "realEstateDocumentTab",
       title: "Documentos",
       elements: [personCpf, personPassportNumber],
     },
