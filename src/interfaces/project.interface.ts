@@ -62,7 +62,7 @@ export interface IForm {
   businessRules?: IBusinessRule[];
 }
 
-interface IModule {
+export interface IModule {
   id: string;
   title: string;
   icon: string;
