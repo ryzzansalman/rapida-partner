@@ -1,8 +1,8 @@
 import type { IFormInput } from "../../../../interfaces/form-input.interface";
 
-export const realEstateRoomName: IFormInput = {
+export const realEstateAddressNumber: IFormInput = {
   type: "input",
   dataType: "text",
-  label: "Nome do espaço",
-  name: "realEstateRoomName",
+  label: "Número",
+  name: "realEstateAddressNumber",
 };

@@ -2,7 +2,7 @@ import type { IModule } from "../../../interfaces/project.interface";
 
 export const projectModule: IModule = {
   id: "projectModule",
-  title: "Projetos",
+  title: "Gerenciamento de projetos",
   icon: "tactic",
   elements: [
     {
@@ -27,14 +27,6 @@ export const projectModule: IModule = {
     },
     {
       id: "projectStepList",
-      type: "lists"
-    },
-    {
-      id: "projectTagForm",
-      type: "forms"
-    },
-    {
-      id: "projectTagList",
       type: "lists"
     },
   ]

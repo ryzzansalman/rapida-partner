@@ -1,0 +1,79 @@
+{
+    "$id": "form-file.ref.json",
+    "type": "object",
+    "properties": {
+        "type": {
+            "const": "file"
+        },
+        "name": {
+            "type": "string"
+        },
+        "label": {
+            "type": "string"
+        },
+        "placeholder": {
+            "type": "string"
+        },
+        "tooltip": {
+            "type": "string"
+        },
+        "isDisabled": {
+            "type": "boolean"
+        },
+        "isRequired": {
+            "type": "boolean"
+        },
+        "conditions": {
+          "$ref": "form-common-conditions.ref.json"
+        },
+        "validators": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "onlyImages",
+                    "png",
+                    "jpg",
+                    "pdf"
+                ]
+            }
+        },
+        "todo": {
+            "type": "string"
+        },
+        "isMultiple": {
+            "type": "boolean"
+        },
+        "options": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": ["string", "number", "boolean"]
+                    },
+                    "isDisabled": {
+                        "type": "boolean"
+                    },
+                    "isSelected": {
+                        "type": "boolean"
+                    }
+                },
+                "required": [
+                    "label",
+                    "value"
+                ]
+            }
+        }
+    },
+    "required": [
+        "type",
+        "dataType",
+        "name",
+        "label",
+        "options"
+    ]
+}

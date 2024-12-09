@@ -5,4 +5,5 @@ export const realEstateName: IFormInput = {
   dataType: "text",
   label: "Nome do imóvel",
   name: "realEstateName",
+  isUnique: true,
 };

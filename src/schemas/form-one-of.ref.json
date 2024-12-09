@@ -17,6 +17,9 @@
         "$ref": "form-select.ref.json"
       },
       {
+        "$ref": "form-file.ref.json"
+      },
+      {
         "$ref": "form-tab.ref.json"
       },
       {

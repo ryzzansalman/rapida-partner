@@ -2,6 +2,7 @@ import type { IFormArray } from "./form-array.interface";
 import type { IFormAutocomplete } from "./form-autocomplete.interface";
 import type { IFormButton } from "./form-button.interface";
 import type { IFormFieldset } from "./form-fieldset.interface";
+import type { IFormFile } from "./form-file.interface";
 import type { IFormInput } from "./form-input.interface";
 import type { IFormSelect } from "./form-select.interface";
 import type { IFormTab } from "./form-tab.interface";
@@ -74,4 +75,4 @@ interface IModuleElement {
   type: "forms" | "lists" | "displays" | "charts";
 }
 
-export type IFormElement = IFormInput | IFormSelect | IFormAutocomplete | IFormArray | IFormTab | IFormFieldset | IFormButton;
+export type IFormElement = IFormInput | IFormSelect | IFormAutocomplete | IFormArray | IFormTab | IFormFieldset | IFormButton | IFormFile;

@@ -4,7 +4,7 @@ import { customerModule } from "./modules/customer";
 import { projectModule } from "./modules/project";
 import { realEstateModule } from "./modules/realEstate";
 
-const mezuri: IProject = {
+export const mezuri: IProject = {
   id: "mezuri",
   title: "Mezuri",
   description: "Gerar uma base de dados para ",

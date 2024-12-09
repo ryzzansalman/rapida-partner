@@ -2,7 +2,7 @@ import type { IModule } from "../../../interfaces/project.interface";
 
 export const realEstateModule: IModule = {
   id: "realEstateModule",
-  title: "Imóveis",
+  title: "Gerenciamento de imóveis",
   icon: "real_estate_agent",
   elements: [
     {
@@ -27,14 +27,6 @@ export const realEstateModule: IModule = {
     },
     {
       id: "realEstateRoomList",
-      type: "lists"
-    },
-    {
-      id: "realEstateTagForm",
-      type: "forms"
-    },
-    {
-      id: "realEstateTagList",
       type: "lists"
     },
   ]

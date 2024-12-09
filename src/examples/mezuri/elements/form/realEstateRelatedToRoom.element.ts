@@ -13,5 +13,4 @@ export const realEstateRelatedToRoom: IFormAutocomplete = {
     paramsToFilter: ["realEstateAddressOneZipCode", "realEstateName"],
     paramType: "query",
   },
-  isMultiple: true,
 };
