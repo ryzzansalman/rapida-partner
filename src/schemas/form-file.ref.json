@@ -43,37 +43,11 @@
         },
         "isMultiple": {
             "type": "boolean"
-        },
-        "options": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "label": {
-                        "type": "string"
-                    },
-                    "value": {
-                        "type": ["string", "number", "boolean"]
-                    },
-                    "isDisabled": {
-                        "type": "boolean"
-                    },
-                    "isSelected": {
-                        "type": "boolean"
-                    }
-                },
-                "required": [
-                    "label",
-                    "value"
-                ]
-            }
         }
     },
     "required": [
         "type",
-        "dataType",
         "name",
-        "label",
-        "options"
+        "label"
     ]
 }

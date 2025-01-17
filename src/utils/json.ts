@@ -24,6 +24,7 @@ const validateProjectJson = (jsonProjectInstance: any, jsonSchemaName: string): 
 
     // Load refs
     const refs: string[] = [];
+    const jsonProjectObject = JSON.parse(jsonProjectInstance);
 
     groupJsonSchemaRefs(jsonSchemaInstance, refs);
 
@@ -32,12 +33,15 @@ const validateProjectJson = (jsonProjectInstance: any, jsonSchemaName: string): 
     }
 
     const validate = ajv.compile(jsonSchemaInstance);
-    const valid = validate(jsonProjectInstance);
+    const valid = validate(jsonProjectObject);
 
     if (!valid) {
       console.info(validate.errors);
       return false;
     }
+
+    console.info("Project JSON is valid");
+    
     return true;
   } catch (error: any) {
     console.error(error);

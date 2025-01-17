@@ -13,10 +13,3 @@ export interface IFormFile {
   validators?: ("onlyImages" | "png" | "jpg" | "pdf")[];
   isMultiple?: boolean;
 }
-
-interface ISelectOption {
-  label: string;
-  value: string | number | boolean;
-  isDisabled?: boolean;
-  isSelected?: boolean;
-}
