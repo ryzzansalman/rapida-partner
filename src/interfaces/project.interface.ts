@@ -18,8 +18,10 @@ export interface IProject {
   | "invito" // Meaning it will have a login as main screen and new user are only allowed to access the system if they are invited by an authorized user
   | "permeson" // Meaning it will have a login as main screen, a register component that will be available to non-authenticated users and a permission manager component for users access another users workspace
   | "komerco" // Meaning it will have a products component to e-commerce as main screen and a cart component that will be available to non-authenticated users, but they are only allowed to pay if they are authenticated
+  | "labotablo" // Meaning the flow of invito added to choosing a workspace (according to how may workspaces the user is allowed to access);
   frontend?: IFrontend;
   backend?: IBackend;
+  externalModules?: IExternalModules;
   modules?: IModule[];
   forms?: IForm[];
   lists?: IList[];
@@ -53,6 +55,34 @@ export interface IBusinessRule {
       description: string;
     }[];
   };
+}
+
+export interface IExternalModules {
+  modules:[{
+    id: "kliento";
+    icon: "support_agent";
+    alternativeIcon?: string;
+  } |
+  {
+    id: "pago";
+    icon: "credit-card";
+    alternativeIcon?: string;
+  } |
+  {
+    id: "produkto";
+    icon: "qr_code_2";
+    alternativeIcon?: string;
+  } |
+  {
+    id: "projekto";
+    icon: "tactic";
+    alternativeIcon?: string;
+  } |
+  {
+    id: "uzanto";
+    icon: "face";
+    alternativeIcon?: string;
+  }]
 }
 
 export interface IForm {
