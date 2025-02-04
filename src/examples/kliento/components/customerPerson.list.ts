@@ -5,6 +5,7 @@ import { personName } from "../elements/form/personName.element";
 import { personPhoneOne } from "../elements/form/personPhoneOne.element";
 
 export const customerPersonList: IList = {
+  componentType: "list",
   id: "customerPersonList",
   title: "Lista de pessoas",
   guards: ["isAuthorized"],

@@ -45,7 +45,8 @@ interface IBusinessPLan {
   benchmarkings: string,
   legalIssues: string,
   ethicalIssues: string,
-  afterSales: string
+  afterSales: string,
+  monetization?: string,
 }
 
 export interface IBusinessRule {
@@ -60,32 +61,33 @@ export interface IBusinessRule {
 export interface IExternalModules {
   modules:[{
     id: "kliento";
-    icon: "support_agent";
+    icon?: "support_agent";
     alternativeIcon?: string;
   } |
   {
     id: "pago";
-    icon: "credit-card";
+    icon?: "credit-card";
     alternativeIcon?: string;
   } |
   {
     id: "produkto";
-    icon: "qr_code_2";
+    icon?: "qr_code_2";
     alternativeIcon?: string;
   } |
   {
     id: "projekto";
-    icon: "tactic";
+    icon?: "tactic";
     alternativeIcon?: string;
   } |
   {
     id: "uzanto";
-    icon: "face";
+    icon?: "face";
     alternativeIcon?: string;
   }]
 }
 
 export interface IForm {
+  componentType: "form";
   id: string;
   title: string;
   elements: IFormElement[];
@@ -98,7 +100,7 @@ export interface IModule {
   id: string;
   title: string;
   icon: string;
-  elements: IModuleElement[];
+  components: IComponent[];
 }
 
 interface IModuleElement {
@@ -107,3 +109,5 @@ interface IModuleElement {
 }
 
 export type IFormElement = IFormInput | IFormSelect | IFormAutocomplete | IFormArray | IFormTab | IFormFieldset | IFormButton | IFormFile;
+
+export type IComponent = IForm | IList;

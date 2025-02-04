@@ -27,97 +27,24 @@
       "$ref": "business-rules.ref.json"
     },
     "frontend": {
-      "type": "object",
-      "properties": {
-        "framework": {
-          "type": "string",
-          "enum": [
-            "angular",
-            "flutter",
-            "react",
-            "svelte",
-            "vue"
-          ]
-        },
-        "uiKit": {
-          "type": "string",
-          "enum": [
-            "antdesign",
-            "bootstrap",
-            "material",
-            "flowbite"
-          ]
-        }
-      },
-      "required": [
-        "framework",
-        "uiKit"
-      ]
+      "$ref": "frontend.ref.json"
     },
     "backend": {
-      "type": "object",
-      "properties": {
-        "framework": {
-          "type": "string",
-          "enum": [
-            "functions",
-            "lambda",
-            "laravel",
-            "nest"
-          ]
-        },
-        "database": {
-          "type": "string",
-          "enum": [
-            "mariadb",
-            "mongodb",
-            "oracle",
-            "postgresql"
-          ]
-        }
-      },
-      "required": [
-        "framework",
-        "database"
-      ]
+      "$ref": "backend.ref.json"
+    },
+    "externalModules": {
+      "$ref": "external-module.ref.json"
     },
     "modules": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "icon": {
-            "type": "string"
-          },
-          "elements": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "enum": ["forms", "lists", "displays", "charts"]
-                },
-                "id": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
+      "$ref": "module.ref.json"
     },
     "forms": {
-      "$ref": "form.ref.json"
+      "type": "array",
+      "items": { "$ref": "form.ref.json" }
     },
     "lists": {
-      "$ref": "list.ref.json"
+      "type":"array",
+      "items": { "$ref": "list.ref.json" }
     },
     "displays": {},
     "charts": {}

@@ -1,37 +1,19 @@
 {
     "$id": "form.ref.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "array",
-    "items": {
-        "type": "object",
-        "properties": {
-            "id": {
-                "type": "string"
-            },
-            "title": {
-                "type": "string"
-            },
-            "icon": {
-                "type": "string"
-            },
-            "guards": {
-                "type": "string",
-                "enum": [
-                    "isAuthenticated",
-                    "isAuthorized"
-                ]
-            },
-            "businessRules": {
-                "$ref": "business-rules.ref.json"
-            },
-            "elements": {
-                "$ref": "form-one-of.ref.json"
-            }
-        },
-        "required": [
-            "id",
-            "title",
-            "elements"
-        ]
-    }
-}
+    "type": "object",
+    "properties": {
+      "componentType": { "const": "form" },
+      "id": { "type": "string" },
+      "title": { "type": "string" },
+      "icon": { "type": "string" },
+      "guards": {
+        "type": "string",
+        "enum": ["isAuthenticated", "isAuthorized"]
+      },
+      "businessRules": { "$ref": "business-rules.ref.json" },
+      "elements": { "$ref": "form-one-of.ref.json" }
+    },
+    "required": ["componentType", "id", "title", "elements"]
+  }
+  

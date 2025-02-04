@@ -52,7 +52,6 @@ Com um modelo flexível de pagamento (diário, mensal ou anual), o **Aliro** ate
   externalModules: {
     modules: [{
       id: "kliento",
-      icon: "user"
     }]
   },
   frontend: {

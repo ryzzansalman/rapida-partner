@@ -1,0 +1,29 @@
+{
+  "$id": "frontend.ref.json",
+  "type": "object",
+  "properties": {
+    "framework": {
+      "type": "string",
+      "enum": [
+        "angular",
+        "flutter",
+        "react",
+        "svelte",
+        "vue"
+      ]
+    },
+    "uiKit": {
+      "type": "string",
+      "enum": [
+        "antdesign",
+        "bootstrap",
+        "material",
+        "flowbite"
+      ]
+    }
+  },
+  "required": [
+    "framework",
+    "uiKit"
+  ]
+}

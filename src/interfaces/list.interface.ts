@@ -2,6 +2,7 @@ import type { IApiRequest } from "./form-input.interface";
 import type { IBusinessRule } from "./project.interface";
 
 export interface IList {
+    componentType: "list";
     id: string; // named according to component file name (<id>.<componentType>.ts)
     title: string;
     guards?: string[];

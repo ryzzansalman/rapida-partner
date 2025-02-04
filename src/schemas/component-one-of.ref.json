@@ -1,0 +1,8 @@
+{
+  "$id": "component-one-of.ref.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "oneOf": [
+    { "$ref": "form.ref.json" },
+    { "$ref": "list.ref.json" }
+  ]
+}

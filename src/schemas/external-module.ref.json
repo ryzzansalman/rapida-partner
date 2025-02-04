@@ -1,0 +1,66 @@
+{
+  "$id": "external-module.ref.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "modules": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "id": { "const": "kliento" },
+              "icon": { "const": "support_agent" },
+              "alternativeIcon": { "type": "string" }
+            },
+            "required": ["id"],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": { "const": "pago" },
+              "icon": { "const": "credit-card" },
+              "alternativeIcon": { "type": "string" }
+            },
+            "required": ["id"],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": { "const": "produkto" },
+              "icon": { "const": "qr_code_2" },
+              "alternativeIcon": { "type": "string" }
+            },
+            "required": ["id"],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": { "const": "projekto" },
+              "icon": { "const": "tactic" },
+              "alternativeIcon": { "type": "string" }
+            },
+            "required": ["id"],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": { "const": "uzanto" },
+              "icon": { "const": "face" },
+              "alternativeIcon": { "type": "string" }
+            },
+            "required": ["id"],
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  },
+  "required": ["modules"],
+  "additionalProperties": false
+}

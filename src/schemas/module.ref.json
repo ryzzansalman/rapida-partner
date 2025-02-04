@@ -1,0 +1,23 @@
+{
+  "$id": "module.ref.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "title": { "type": "string" },
+      "icon": { "type": "string" },
+      "components": {
+        "type": "array",
+        "items": {
+          "oneOf": [
+            { "$ref": "form.ref.json" },
+            { "$ref": "list.ref.json" }
+          ]
+        }
+      }
+    },
+    "required": ["id", "title", "icon", "components"]
+  }
+}

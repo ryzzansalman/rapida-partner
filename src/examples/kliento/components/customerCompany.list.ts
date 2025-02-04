@@ -5,6 +5,7 @@ import { companyName } from "../elements/form/companyName.element";
 import { companyPhoneOne } from "../elements/form/companyPhoneOne.element";
 
 export const customerCompanyList: IList = {
+  componentType: "list",
   id: "customerCompanyList",
   title: "Lista de empresas",
   guards: ["isAuthorized"],

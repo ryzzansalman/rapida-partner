@@ -1,0 +1,28 @@
+{
+  "$id": "backend.ref.json",
+  "type": "object",
+  "properties": {
+    "framework": {
+      "type": "string",
+      "enum": [
+        "functions",
+        "lambda",
+        "laravel",
+        "nest"
+      ]
+    },
+    "database": {
+      "type": "string",
+      "enum": [
+        "mariadb",
+        "mongodb",
+        "oracle",
+        "postgresql"
+      ]
+    }
+  },
+  "required": [
+    "framework",
+    "database"
+  ]
+}
